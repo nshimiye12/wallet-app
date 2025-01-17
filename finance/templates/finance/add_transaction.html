@@ -1,0 +1,29 @@
+{% extends 'finance/base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Add Transaction</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="transaction_type" class="form-label">Type</label>
+            <select class="form-select" id="transaction_type" name="transaction_type" required>
+                <option value="IN">Income</option>
+                <option value="OUT">Expense</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" name="amount" step="0.01" required>
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" class="form-control" id="category" name="category" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+</div>
+{% endblock %}
