@@ -8,7 +8,7 @@ This is a simple wallet application built using Django.
 - View all transactions.
 
 ## Deployment
-This application is hosted on [your_deployment_link].
+This application is hosted on [].
 
 ## Setup
 1. Clone the repository.
